@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body class="flex flex-col justify-evenly h-full">
+    <div class="w-auto flex justify-center items-center gap-8 h-8vh p-2">
+      <input class="w-1/4 text-center" type="text" id="add-task" placeholder="Ajouter une tâche">
+      <select class="w-1/4 bg-white text-center" id="urgency-level">
+        <option value="URGENT / IMPORTANT">URGENT / IMPORTANT</option>
+        <option value="IMPORTANT / NON URGENT">IMPORTANT / NON URGENT</option>
+        <option value="URGENT / NON IMPORTANT">URGENT / NON IMPORTANT</option>
+        <option value="NON URGENT / NON IMPORTANT">NON URGENT / NON IMPORTANT</option>
+      </select>
+    </div>
+
+    <div class="grid grid-cols-2 grid-rows-2 w-full h-80vh gap-3 p-3">
+      <div id="case1" class="case bg-red-400">
+        <h1>URGENT / IMPORTANT</h1>
+        <div class="scase">
+        </div>
+      </div>
+      <div id="case2" class="case bg-orange-300">
+        <h1>IMPORTANT / NON URGENT</h1>
+        <div class="scase">
+        </div>
+      </div>
+      <div id="case3" class="case bg-blue-400">
+        <h1>URGENT / NON IMPORTANT</h1>
+        <div class="scase">
+        </div>
+      </div>
+      <div id="case4" class="case bg-green-500">
+        <h1>NON URGENT / NON IMPORTANT</h1>
+        <div class="scase">
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
