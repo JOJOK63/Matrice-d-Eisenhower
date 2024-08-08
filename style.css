@@ -4,7 +4,7 @@
 
 *{
   box-sizing: border-box;
-  box-shadow: 0 0 0 1px red;
+  /* box-shadow: 0 0 0 1px red; */
   padding: 0;
   margin: 0;
 }
@@ -35,4 +35,36 @@ gap: 5px;
 .case .scase {
   height: 85%;
   width: 90%;
+  overflow: auto;
+}
+
+.task-line{
+  display: flex;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px 0;
+ }
+
+.task-line p{
+  width: 90%;
+  height: 60px;
+  overflow: auto;
+}
+
+.action-div{
+  width: 10%;
+  display: flex;
+}
+.task-line span {
+  width:100%; 
+}
+
+.task-line .span-delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.task-line .span-delete img{
+  width: 30%;
+  object-fit: contain;
 }
