@@ -1,5 +1,6 @@
 import './style.css';
 import { Task } from './task.js';
+import deleteSvg from './public/delete-bin-6-line.svg';
 
 const inputTaskAdd = document.getElementById('add-task');
 const deroulanteUrgencyLevel = document.getElementById('urgency-level');
@@ -43,7 +44,7 @@ function setViewtask(tasks) {
       const spanDelete = document.createElement('span');
       spanDelete.className = 'span-delete';
       const deleteIcon = document.createElement('img');
-      deleteIcon.src = './public/delete-bin-6-line.svg';
+      deleteIcon.src =  deleteSvg;
       spanDelete.appendChild(deleteIcon);
 
       // Ajouter un écouteur d'événements au bouton de suppression
