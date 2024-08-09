@@ -26,13 +26,7 @@ function setViewtask(tasks) {
   divUNI.innerHTML = '';
   divNUNI.innerHTML = '';
 
-  if (tasks.length === 0) {
-    // Si aucune tâche n'est trouvée, afficher les divs vides
-    divUI.innerHTML = '<p>Aucune tâche urgente et importante</p>';
-    divINU.innerHTML = '<p>Aucune tâche importante mais non urgente</p>';
-    divUNI.innerHTML = '<p>Aucune tâche urgente mais non importante</p>';
-    divNUNI.innerHTML = '<p>Aucune tâche non urgente et non importante</p>';
-  } else {
+
     tasks.forEach(task => {
       const divTask = document.createElement('div');
       divTask.className = 'task-line';
@@ -82,7 +76,7 @@ function setViewtask(tasks) {
       }
     });
   }
-}
+
 
 addBtn.addEventListener("click", function(){
   const taskContent = inputTaskAdd.value;
