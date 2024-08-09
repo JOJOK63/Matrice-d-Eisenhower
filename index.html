@@ -7,9 +7,10 @@
     <title>Matrice d'Eisenhower</title>
   </head>
   <body class="flex flex-col justify-evenly h-full">
-    <div class="w-auto flex justify-center items-center gap-8 h-8vh p-2">
-      <input class="w-1/4 text-center" type="text" id="add-task" placeholder="Ajouter une tâche">
-      <select class="w-1/4 bg-white text-center" id="urgency-level">
+    <div class="w-auto flex justify-center items-center gap-8 h-8vh p-2 mt-4">
+      <input class="w-1/4 text-center header-style" type="text" id="add-task" placeholder="Ajouter une tâche">
+      <button id="add-btn" class="bg-white header-style"> AJOUTER </button>
+      <select class="w-1/4 bg-white text-center  header-style" id="urgency-level">
         <option value="URGENT / IMPORTANT">URGENT / IMPORTANT</option>
         <option value="IMPORTANT / NON URGENT">IMPORTANT / NON URGENT</option>
         <option value="URGENT / NON IMPORTANT">URGENT / NON IMPORTANT</option>
@@ -17,23 +18,23 @@
       </select>
     </div>
 
-    <div class="grid grid-cols-2 grid-rows-2 w-full h-80vh gap-3 p-3">
-      <div id="u-i" class="case bg-red-400">
+    <div class="grid lg:grid-cols-2 lg:grid-rows-2 w-75vw m-auto h-80vh gap-5 p-5 grid grid-cols-1">
+      <div id="u-i" class="case">
         <h1>URGENT / IMPORTANT</h1>
         <div class="scase">
         </div>
       </div>
-      <div id="i-nu" class="case bg-orange-300">
+      <div id="i-nu" class="case ">
         <h1>IMPORTANT / NON URGENT</h1>
         <div class="scase">
         </div>
       </div>
-      <div id="u-ni" class="case bg-blue-400">
+      <div id="u-ni" class="case ">
         <h1>URGENT / NON IMPORTANT</h1>
         <div class="scase">
         </div>
       </div>
-      <div id="nu-ni" class="case bg-green-500">
+      <div id="nu-ni" class="case ">
         <h1>NON URGENT / NON IMPORTANT</h1>
         <div class="scase">
         </div>

@@ -3,6 +3,7 @@ import { Task } from './task.js';
 
 const inputTaskAdd = document.getElementById('add-task');
 const deroulanteUrgencyLevel = document.getElementById('urgency-level');
+const addBtn = document.getElementById('add-btn');
 const divUI = document.getElementById('u-i').querySelector('.scase');
 const divINU = document.getElementById('i-nu').querySelector('.scase');
 const divUNI = document.getElementById('u-ni').querySelector('.scase');
@@ -59,15 +60,20 @@ function setViewtask(tasks) {
 
       switch (task.urgency) {
         case "URGENT / IMPORTANT":
+          divTask.classList.add('u-i')
           divUI.appendChild(divTask);
+          
           break;
         case "IMPORTANT / NON URGENT":
+          divTask.classList.add('i-nu')
           divINU.appendChild(divTask);
           break;
         case "URGENT / NON IMPORTANT":
+          divTask.classList.add('u-ni')
           divUNI.appendChild(divTask);
           break;
         case "NON URGENT / NON IMPORTANT":
+          divTask.classList.add('nu-ni')
           divNUNI.appendChild(divTask);
           break;
         default:
@@ -76,6 +82,19 @@ function setViewtask(tasks) {
     });
   }
 }
+
+addBtn.addEventListener("click", function(){
+  const taskContent = inputTaskAdd.value;
+  const taskUrgency = deroulanteUrgencyLevel.value;
+
+  // Récupérer les tâches actuelles à partir du localStorage
+  const tasks = getTasksFromLocalStorage();
+
+  // Ajouter la nouvelle tâche à la liste
+  addTask(taskContent, taskUrgency, tasks);
+
+  event.preventDefault(); // Empêche l'ajout d'une nouvelle ligne si c'est un textarea
+});
 
 function observUrgencyChange() {
   inputTaskAdd.addEventListener('keypress', (event) => {
